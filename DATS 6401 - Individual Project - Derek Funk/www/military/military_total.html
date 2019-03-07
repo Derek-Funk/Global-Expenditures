@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript"
+	        src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		//load the google charts
+		google.charts.load('current',{'packages':['corechart']});
+		
+		//load the Callback function that runs when page loads
+		google.charts.setOnLoadCallback(drawAllSheets3_2);
+		
+		function drawSheetName3_2(sheetName, query, responseHandler) {
+			var queryString = encodeURIComponent(query);
+			var query = new google.visualization.Query(
+				'https://docs.google.com/spreadsheets/d/1RSoKVY3ZERLH-g1M8fc8Cchaqv00jbQ2WJrECpPpP_w/gviz/tq?sheet=' +
+							sheetName + '&headers=1&tq=' + queryString);
+			query.send(responseHandler);
+		} //drawSheetName
+		
+		function drawAllSheets3_2() {
+			drawSheetName3_2('militarySpend_USD', 
+						  'SELECT A,B,C,D,E,F,G',
+						  responseHandler3_2);
+		} //drawAllSheets
+
+		function responseHandler3_2(response) {
+			var data = response.getDataTable();
+			data.sort({column:6, desc:true});
+			var options = {
+						height: 400,
+						vAxis: {title: 'Spending in Billions ($)'},
+						hAxis: {title: 'Country'},
+						title: 'Military Spending, ordered by 2015'
+			};
+			
+			var chart = new google.visualization.ColumnChart(
+						document.getElementById('googleVizDiv3_2'));
+			
+			chart.draw(data, options);
+		} //responseHandler3
+		
+	</script>
+</head>
+<body>
+	<div id="googleVizDiv3_2"
+		 style="width:1000px; height:400px;"></div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript"
+	        src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		//load the google charts
+		google.charts.load('current',{'packages':['corechart']});
+		
+		//load the Callback function that runs when page loads
+		google.charts.setOnLoadCallback(drawAllSheets4_3);
+		
+		function drawSheetName4_3(sheetName, query, responseHandler) {
+			var queryString = encodeURIComponent(query);
+			var query = new google.visualization.Query(
+				'https://docs.google.com/spreadsheets/d/1RSoKVY3ZERLH-g1M8fc8Cchaqv00jbQ2WJrECpPpP_w/gviz/tq?sheet=' +
+							sheetName + '&headers=1&tq=' + queryString);
+			query.send(responseHandler);
+		} //drawSheetName
+		
+		function drawAllSheets4_3() {
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,B', responseHandler4_3_1);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,C', responseHandler4_3_2);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,D', responseHandler4_3_3);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,E', responseHandler4_3_4);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,F', responseHandler4_3_5);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,G', responseHandler4_3_6);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,H', responseHandler4_3_7);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,I', responseHandler4_3_8);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,J', responseHandler4_3_9);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,K', responseHandler4_3_10);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,L', responseHandler4_3_11);
+			drawSheetName4_3('expensesBreakdown2015', 'SELECT A,M', responseHandler4_3_12);
+		} //drawAllSheets
+
+		function responseHandler4_3_1(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'Australia'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_1'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_2(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'Brazil'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_2'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_3(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'Germany'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_3'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_4(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'France'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_4'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_5(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'United Kingdom'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_5'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_6(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'Indonesia'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_6'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_7(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'Italy'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_7'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_8(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'Japan'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_8'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_9(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'South Korea'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_9'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_10(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'Mexico'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_10'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_11(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'United States'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_11'));
+			chart.draw(data, options);
+		}
+		
+		function responseHandler4_3_12(response) {
+			var data = response.getDataTable();
+			
+			var options = {height: 200, pieSliceText: 'none', title: 'South Africa'};
+			var chart = new google.visualization.PieChart(document.getElementById('googleVizDiv4_3_12'));
+			chart.draw(data, options);
+		}
+	</script>
+</head>
+<body>
+	<div id="googleVizDiv4_3_8" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_11" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_3" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_7" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_4" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_1" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_5" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_2" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_12" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_10" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_9" style="width:500px; height:200px;"></div>
+	<div id="googleVizDiv4_3_6" style="width:500px; height:200px;"></div>
+	
+	
+</body>
+</html>
